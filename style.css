@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  line-height: 160%;
+}
+
+a {
+  text-decoration: none;
+  color: #a1a1aa;
+}
+
+p:hover {
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-image: url(./assets/bg.png);
+  background-size: 100% auto;
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  margin: 150px auto;
+}
+
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
+}
+
+header div {
+  width: 120px;
+  margin: auto;
+  display: flex;
+
+  border-radius: 50%;
+  padding: 4px;
+  background-image: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #73ff00,
+    #0000ff,
+    #4b0082
+  );
+
+  transition: transform 0.3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+section {
+  color: #ffffff;
+  background-image: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #73ff00,
+    #0000ff,
+    #4b0082
+  );
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: #2a2634;
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #a1a1aa;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+section ul li {
+  transition: transform 0.3s;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+.games-list img {
+  width: 90px;
+  border-radius: 8px;
+}
+
+.channel-list img {
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid #443e54;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+
+  color: #a1a1aa;
+  background-color: #2a2634;
+  border-radius: 7px;
+  border: 1px solid #a1a1aa;
+
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+/* animation */
+
+header div {
+  animation: fromTop 0.7s 0.2s backwards;
+}
+
+main section {
+  animation: fromBottom 0.7s backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+
+main section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+main section:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
